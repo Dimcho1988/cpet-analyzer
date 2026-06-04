@@ -252,7 +252,7 @@ except Exception as e:
 # Header summary
 with st.expander("Разпозната структура на файла", expanded=False):
     c1, c2, c3 = st.columns(3)
-    c1.write("**Избран лист:**", file_info.get("selected_sheet"))
+    c1.markdown(f"**Избран лист:** {file_info.get('selected_sheet')}")
     c2.write("**Ред със заглавия:**", extraction_info.get("header_row_1based"))
     c3.write("**Първи ред с данни:**", extraction_info.get("data_start_row_1based"))
     st.write("**Разпознати колони:**")
